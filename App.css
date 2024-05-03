@@ -1,0 +1,479 @@
+.note-app {
+  font-family: Arial, sans-serif;
+}
+
+.app-header {
+  text-align: left;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bolder;
+  background-color: white;
+}
+
+.week-number {
+  position: absolute;
+  top: 33px;
+  left: 950px;
+  font-size: 16px;
+}
+
+.weekdays {
+  position: absolute;
+  top: 48px;
+  left: 955px;
+  font-size: 14px;
+}
+
+.header-container {
+  top: -15px;
+  left: -20px;
+  width: 395px;
+  border-bottom: 2px solid black;
+  position: relative;
+  padding-left: 20px;
+  background-color: white;
+}
+
+.day {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  height: 66px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.day:hover {
+  background-color: lightgray;
+}
+
+.day.selected {
+  background-color: lightgray;
+}
+
+.days-container {
+  display: block;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.current-date {
+  font-size: 13px;
+  position: absolute;
+  top: 63px;
+  right: 900px;
+  font-weight: bolder;
+}
+
+.current-day {
+  font-size: 13px;
+  position: absolute;
+  top: 50px;
+  right: 900px;
+  font-weight: bolder;
+}
+
+.notes-container {
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: fit-content;
+  background-color: white;
+}
+
+.note {
+  position: relative;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 10px;
+  width: 350px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.note-details h3 {
+  margin-top: 0;
+}
+
+.add-note-button {
+  bottom: 0px;
+  left: 49%;
+  position: absolute;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 18px;
+  border-radius: 40%;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid black;
+}
+
+.add-note-button:hover {
+  background-color: gray;
+}
+
+.checkmark-button {
+  bottom: -8px;
+  left: 185px;
+  position: absolute;
+  display: block;
+  margin: 20px auto;
+  padding: 2.5px 5px;
+  font-size: 16px;
+  border-radius: 60%;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  border: 2px solid black;
+}
+
+.update-note-button {
+  display: block;
+  position: absolute;
+  font-size: 16px;
+  margin: 20px auto;
+  border-radius: 60%;
+  padding: 2.5px 5px;
+  border: none;
+  color: black;
+  background-color: #ffffff;
+  border: 2px solid black;
+  bottom: -8px;
+  left: 185px;
+}
+
+.confirm-button {
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+.confirm-button:hover {
+  background-color: gray;
+}
+
+.delete-button {
+  position: absolute;
+  bottom: -8px;
+  right: 37.5px;
+  background-color: white;
+  color: black;
+  border: 2px solid black;
+  border-radius: 60%;
+  padding: 1px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.delete-button:hover {
+  background-color: grey;
+}
+
+.delete-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.completed {
+  opacity: 0.5;
+}
+
+.navigation-buttons {
+  position: absolute;
+  bottom: 0px;
+  color: black;
+}
+
+.navigation-buttons button {
+  margin-right: 310px;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 40px;
+}
+
+.custom-checkbox {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+}
+
+.note-actions {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+}
+
+.note-actions input[type="checkbox"] {
+  margin-left: 5px;
+}
+
+.back-button {
+  position: absolute;
+  top: 50px;
+  left: 1120px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid black;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: black;
+  background-color: white;
+}
+
+.close-button {
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+}
+
+.closing-button {
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: white;
+  border: 2px solid black;
+  padding: 2.5px, 5px;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+
+.close-button:hover {
+  background-color: lightgrey;
+}
+
+.closing-button:hover {
+  background-color: lightgrey;
+}
+
+.language-toggle {
+  display: flex;
+}
+
+.language-option {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.theme-toggle {
+  display: flex;
+}
+
+.theme-option {
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+}
+
+.back-button:hover {
+  background-color: gray;
+}
+
+.delete-button:hover {
+  background-color: grey;
+}
+
+.color-options {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.color-option {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+.color-option.selected {
+  border-color: black;
+}
+
+.note-creation-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+  background-color: #ffffff;
+  padding: 18px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  z-index: 999;
+}
+
+.time-picker-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.time-picker-container::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 8px;
+}
+
+.time-picker-container::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+}
+
+.time-picker-container::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+.time-picker select {
+  width: 60px;
+  height: 30px;
+  margin-right: 5px;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.time-picker select:last-child {
+  margin-right: 0;
+}
+
+.input-group {
+  margin-bottom: 10px;
+}
+
+.input-label {
+  margin-bottom: 5px;
+}
+
+.input-field {
+  width: calc(100% - 40px);
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: white;
+  resize: none;
+}
+
+.settings-menu {
+  top: 150px;
+  left: 810px;
+  padding-top: 10px;
+  padding-left: 90px;
+  padding-right: 100px;
+  padding-bottom: 30px;
+  border: 2px solid black;
+  position: absolute;
+  z-index: 999;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.day-settings {
+  position: absolute;
+  top: 52.5px;
+  right: 770px;
+  background-color: white;
+  padding: 1px;
+  cursor: pointer;
+  z-index: 999;
+  border: white;
+}
+
+.day-settings img {
+  width: 25px;
+  height: 25px;
+}
+
+.confirm-button {
+  margin-top: 10px;
+}
+
+.time-picker-container {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.mobile-container {
+  width: 375px;
+  height: 800px;
+  margin: 0 auto;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: white;
+}
+
+body {
+  margin-top: 20px;
+}
+
+.alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.alert-message {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 20px;
+  z-index: 999;
+}
+
+.alert-close {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 2.5px, 5px;
+  margin: 2px solid black;
+}
+
+.confirmation-message {
+  padding: 10px;
+  z-index: 999;
+}
+
+.yes-button {
+  position: absolute;
+  top: 60px;
+  right: 190px;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 2px solid black;
+}
+
+.no-button {
+  position: absolute;
+  top: 60px;
+  right: 150px;
+  background: white;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 2px solid black;
+}
