@@ -229,7 +229,7 @@ function NoteApp() {
           filterNotesByDay();
         }
       } else {
-        setAlertMessage('Täytä kaikki kentät ja valitse väri.');
+        setAlertMessage('Valitse vähintään väri, nimi ja aika');
       }
     }
   };
@@ -522,9 +522,9 @@ function NoteApp() {
         </div>
       )}
       {!showDayView && (
-        <div className="navigation-buttons">
-          <button onClick={prevDay}>&#x21E6;</button>
-          <button onClick={nextDay}>&#x21E8;</button>
+        <div className="bottom-container">
+            <button className="leftbutton" onClick={prevDay}>&#x21E6;</button>
+            <button className="rightbutton" onClick={nextDay}>&#x21E8;</button>
         </div>
       )}
       {!showDayView && (

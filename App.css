@@ -3,6 +3,7 @@
 }
 
 .app-header {
+  position: absolute;
   text-align: left;
   margin-bottom: 10px;
   font-size: 15px;
@@ -12,38 +13,45 @@
 
 .week-number {
   position: absolute;
-  top: 33px;
-  left: 950px;
-  font-size: 16px;
+  width: 120px;
+  top: -140px;
+  left: 195px;
+  font-size: 20px;
+  z-index: 3;
 }
 
 .weekdays {
   position: absolute;
-  top: 48px;
-  left: 955px;
-  font-size: 14px;
+  top: -120px;
+  left: 205px;
+  font-size: 18px;
+  z-index: 3;
 }
 
 .header-container {
-  top: -15px;
-  left: -20px;
-  width: 395px;
+  top: 23px;
+  left: 748px;
+  height: 80px;
+  width: 404px;
   border-bottom: 2px solid black;
-  position: relative;
+  position: fixed;
   padding-left: 20px;
   background-color: white;
+  z-index: 1;
 }
 
 .day {
   position: relative;
+  top: -59px;
+  left: -23px;
   border: 2px solid black;
-  border-radius: 5px;
   padding: 10px;
-  width: 350px;
-  height: 66px;
-  margin-bottom: 10px;
+  width: 405px;
+  height: 90px;
+  margin-bottom: -2px;
   cursor: pointer;
   background-color: white;
+  z-index: 4;
 }
 
 .day:hover {
@@ -55,41 +63,47 @@
 }
 
 .days-container {
+  margin-top: 120px;
   display: block;
-  margin-bottom: 20px;
   background-color: white;
 }
 
 .current-date {
-  font-size: 13px;
+  font-size: 16px;
   position: absolute;
-  top: 63px;
-  right: 900px;
+  top: 61px;
+  right: 898px;
   font-weight: bolder;
+  text-align: center;
+  z-index: 3;
 }
 
 .current-day {
-  font-size: 13px;
+  font-size: 20px;
   position: absolute;
-  top: 50px;
-  right: 900px;
+  top: 42px;
+  left: 950px;
   font-weight: bolder;
+  text-align: center;
+  z-index: 3;
 }
 
 .notes-container {
   display: block;
   margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 67px;
+  margin-bottom: 67px;
   width: fit-content;
   background-color: white;
 }
 
 .note {
+  margin-top: 5px;
   position: relative;
-  border: 2px solid black;
-  border-radius: 5px;
+  left: -3.8%;
+  border: 3px solid black;
   padding: 10px;
-  width: 350px;
+  width: 390px;
   display: block;
   margin-bottom: 10px;
 }
@@ -99,18 +113,18 @@
 }
 
 .add-note-button {
-  bottom: 0px;
-  left: 49%;
   position: absolute;
-  display: block;
+  bottom: 78px;
+  left: 50%; 
+  transform: translateX(-50%); 
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 18px;
   border-radius: 40%;
-  border: none;
+  border: 2px solid black;
   background-color: #ffffff;
   color: black;
-  border: 2px solid black;
+  z-index: 9;
 }
 
 .add-note-button:hover {
@@ -148,8 +162,12 @@
 }
 
 .confirm-button {
-  margin-bottom: 10px;
   background-color: white;
+  position: absolute;
+  top: 278px;
+  left: 85%;
+  width: 28px;
+  height: 28px;
 }
 
 .confirm-button:hover {
@@ -158,7 +176,7 @@
 
 .delete-button {
   position: absolute;
-  bottom: -8px;
+  bottom: -9px;
   right: 37.5px;
   background-color: white;
   color: black;
@@ -175,25 +193,41 @@
 
 .delete-icon {
   width: 20px;
-  height: 20px;
+  height: 17px;
 }
 
 .completed {
   opacity: 0.5;
 }
 
-.navigation-buttons {
+.leftbutton {
+  margin-left: 40px;
   position: absolute;
-  bottom: 0px;
+  bottom: 19px; 
+  left: 0%; 
+  transform: translateX(-50%); 
   color: black;
-}
-
-.navigation-buttons button {
-  margin-right: 310px;
   border: none;
   background: none;
   padding: 0;
   font-size: 40px;
+  z-index: 10;
+
+}
+
+.rightbutton {
+  margin-left: 40px;
+  position: absolute;
+  bottom: 19px; 
+  left: 81%; 
+  transform: translateX(-50%); 
+  color: black;
+  border: none;
+  background: none;
+  padding: 0;
+  font-size: 40px;
+  z-index: 10;
+
 }
 
 .custom-checkbox {
@@ -215,7 +249,7 @@
 
 .back-button {
   position: absolute;
-  top: 50px;
+  top: 47px;
   left: 1120px;
   width: 30px;
   height: 30px;
@@ -229,6 +263,7 @@
   background-color: transparent;
   color: black;
   background-color: white;
+  z-index: 4;
 }
 
 .close-button {
@@ -236,6 +271,11 @@
   cursor: pointer;
   background-color: white;
   border: 2px solid black;
+  height: 29px;
+  width: 29px;
+  position: absolute;
+  top: 2px;
+  left: 85%;
 }
 
 .closing-button {
@@ -313,8 +353,8 @@
   background-color: #ffffff;
   padding: 18px;
   border: 2px solid #000000;
-  border-radius: 10px;
-  z-index: 999;
+  border-radius: 2px;
+  z-index: 12;
 }
 
 .time-picker-container::-webkit-scrollbar {
@@ -336,9 +376,10 @@
 }
 
 .time-picker select {
-  width: 60px;
+  width: 50px;
   height: 30px;
   margin-right: 5px;
+  margin-left: 5px;
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -367,26 +408,26 @@
 
 .settings-menu {
   top: 150px;
-  left: 810px;
+  left: 26px;
   padding-top: 10px;
   padding-left: 90px;
   padding-right: 100px;
   padding-bottom: 30px;
   border: 2px solid black;
   position: absolute;
-  z-index: 999;
+  z-index: 100;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 .day-settings {
   position: absolute;
-  top: 52.5px;
-  right: 770px;
+  top: -112px;
+  right: -380px;
   background-color: white;
   padding: 1px;
   cursor: pointer;
-  z-index: 999;
+  z-index: 3;
   border: white;
 }
 
@@ -405,14 +446,17 @@
 }
 
 .mobile-container {
-  width: 375px;
-  height: 800px;
+  width: 20%; 
+  height: 85vh; 
   margin: 0 auto;
   border: 2px solid black;
-  border-radius: 10px;
+  border-radius: 0px;
   padding: 20px;
   overflow-y: auto;
+  overflow-x: hidden;
   background-color: white;
+  scrollbar-width: none;
+  z-index: 2;
 }
 
 body {
@@ -420,23 +464,25 @@ body {
 }
 
 .alert {
-  position: fixed;
+  position: absolute;
+  height: 12%;
+  width: 18%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   padding: 10px 20px;
   border: 2px solid #000000;
-  border-radius: 10px;
+  border-radius: 2px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  z-index: 999;
+  z-index: 15;
 }
 
 .alert-message {
-  font-size: 16px;
+  font-size: 17px;
   font-weight: bold;
   padding: 20px;
-  z-index: 999;
+  position: absolute;
 }
 
 .alert-close {
@@ -453,13 +499,13 @@ body {
 
 .confirmation-message {
   padding: 10px;
-  z-index: 999;
+
 }
 
 .yes-button {
   position: absolute;
-  top: 60px;
-  right: 190px;
+  top: 85%;
+  right: 70%;
   background: white;
   font-size: 18px;
   cursor: pointer;
@@ -469,11 +515,22 @@ body {
 
 .no-button {
   position: absolute;
-  top: 60px;
-  right: 150px;
+  top: 85%;
+  right: 25%;
   background: white;
   font-size: 18px;
   cursor: pointer;
   border-radius: 5px;
   margin: 2px solid black;
+}
+
+.bottom-container {
+  position: absolute;
+  left:748px;
+  bottom: 83px;
+  border-top: 2px solid black;
+  height: 80px;
+  width: 424px;
+  background-color: white;
+  z-index: 8;
 }
