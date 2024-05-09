@@ -345,6 +345,13 @@ function NoteApp() {
         noteDate.getDate() === currentDate.getDate()
       );
     });
+
+    filteredNotes.sort((a, b) => {
+      const timeA = new Date(`1970-01-01T${a.time}`);
+      const timeB = new Date(`1970-01-01T${b.time}`);
+      return timeA - timeB;
+    });
+    
     return filteredNotes;
   };
 
@@ -477,7 +484,7 @@ function NoteApp() {
             </div>
           </div>
           <div className="input-group">
-            <div className="input-label">Kuvaus</div>
+            <div className="input-lab l">Kuvaus</div>
             <textarea
               placeholder="Anna muistion kuvaus"
               value={desc}
