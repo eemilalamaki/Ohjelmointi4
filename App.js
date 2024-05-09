@@ -349,7 +349,8 @@ function NoteApp() {
   };
 
   return (
-    <div className="note-app">
+    <div className='mobile-container'>
+      <div className="note-app"></div>
       {!showDayView && (
         <header className="app-header">
           <div className="header-container">
@@ -368,9 +369,10 @@ function NoteApp() {
           <div className='weekdays'>
             <p>29.4-1.5</p>
           </div>
-          <div> <button className="day-settings" onClick={toggleSettingsMenu}>
-            <img src={settingsicon} alt="Asetukset" className="settings-icon" />
-          </button>
+          <div>
+            <button className="day-settings" onClick={toggleSettingsMenu}>
+              <img src={settingsicon} alt="Asetukset" className="settings-icon" />
+            </button>
             {showSettings && (
               <SettingsMenu
                 toggleLanguage={toggleLanguage}
@@ -399,10 +401,17 @@ function NoteApp() {
       ) : (
         <div className="notes-container">
           <div className="selected-day">
+            <div className="bottom-container">
+              <button className="leftbutton" onClick={prevDay}>&#x21E6;</button>
+              <button className="rightbutton" onClick={nextDay}>&#x21E8;</button>
+            </div>
             <span className="current-day">{days[currentDay]}</span>
             <span className="current-date">{getCurrentDate()}</span>
             <button className="back-button" onClick={() => setShowDayView(true)}>
               X
+            </button>
+            <button className="add-note-button" onClick={() => setShowInputs(true)}>
+              +
             </button>
           </div>
           {filterNotesByDay().map((note, index) => (
@@ -484,11 +493,11 @@ function NoteApp() {
               </button>
             )}
             {editMode ? (
-              <button className="update-note-button confirm-button" onClick={addNote}>
+              <button className="update-note-button" onClick={addNote}>
                 &#x2713;
               </button>
             ) : (
-              <button className="checkmark-button confirm-button" onClick={addNote}>
+              <button className="checkmark-button" onClick={addNote}>
                 &#x2713;
               </button>
             )}
@@ -521,17 +530,6 @@ function NoteApp() {
           ))}
         </div>
       )}
-      {!showDayView && (
-        <div className="bottom-container">
-            <button className="leftbutton" onClick={prevDay}>&#x21E6;</button>
-            <button className="rightbutton" onClick={nextDay}>&#x21E8;</button>
-        </div>
-      )}
-      {!showDayView && (
-        <button className="add-note-button" onClick={() => setShowInputs(true)}>
-          +
-        </button>
-      )}
       {alertMessage && (
         <Alert message={alertMessage} onClose={() => setAlertMessage('')} />
       )}
@@ -539,12 +537,5 @@ function NoteApp() {
   );
 }
 
-const App = () => {
-  return (
-    <div className="mobile-container">
-      <NoteApp />
-    </div>
-  );
-};
 
-export default NoteApp && App;
+export default NoteApp;

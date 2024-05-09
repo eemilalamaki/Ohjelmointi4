@@ -14,27 +14,28 @@
 .week-number {
   position: absolute;
   width: 120px;
-  top: -140px;
+  top: -17px;
   left: 195px;
   font-size: 20px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .weekdays {
   position: absolute;
-  top: -120px;
-  left: 205px;
+  top: 3px;
+  left: 202px;
   font-size: 18px;
-  z-index: 3;
+  z-index: 4;
 }
 
 .header-container {
-  top: 23px;
-  left: 748px;
-  height: 80px;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  height: 82px;
   width: 404px;
   border-bottom: 2px solid black;
-  position: fixed;
+  position: absolute;
   padding-left: 20px;
   background-color: white;
   z-index: 1;
@@ -42,8 +43,8 @@
 
 .day {
   position: relative;
-  top: -59px;
-  left: -23px;
+  top: -58px;
+  left: -22px;
   border: 2px solid black;
   padding: 10px;
   width: 405px;
@@ -68,11 +69,15 @@
   background-color: white;
 }
 
+.selected-day {
+  position: absolute;
+}
+
 .current-date {
   font-size: 16px;
   position: absolute;
-  top: 61px;
-  right: 898px;
+  top: -44px;
+  right: -70px;
   font-weight: bolder;
   text-align: center;
   z-index: 3;
@@ -81,8 +86,8 @@
 .current-day {
   font-size: 20px;
   position: absolute;
-  top: 42px;
-  left: 950px;
+  top: -62px;
+  left: -10px;
   font-weight: bolder;
   text-align: center;
   z-index: 3;
@@ -114,9 +119,9 @@
 
 .add-note-button {
   position: absolute;
-  bottom: 78px;
-  left: 50%; 
-  transform: translateX(-50%); 
+  bottom: -772px;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 20px auto;
   padding: 10px 20px;
   font-size: 18px;
@@ -132,18 +137,21 @@
 }
 
 .checkmark-button {
-  bottom: -8px;
+  bottom: -20px;
   left: 185px;
   position: absolute;
   display: block;
   margin: 20px auto;
-  padding: 2.5px 5px;
   font-size: 16px;
   border-radius: 60%;
   border: none;
   background-color: #ffffff;
   color: black;
   border: 2px solid black;
+}
+
+.checkmark-button:hover {
+  background-color: gray;
 }
 
 .update-note-button {
@@ -152,25 +160,15 @@
   font-size: 16px;
   margin: 20px auto;
   border-radius: 60%;
-  padding: 2.5px 5px;
   border: none;
   color: black;
   background-color: #ffffff;
   border: 2px solid black;
-  bottom: -8px;
+  bottom: -20px;
   left: 185px;
 }
 
-.confirm-button {
-  background-color: white;
-  position: absolute;
-  top: 278px;
-  left: 85%;
-  width: 28px;
-  height: 28px;
-}
-
-.confirm-button:hover {
+.update-note-button:hover {
   background-color: gray;
 }
 
@@ -203,9 +201,9 @@
 .leftbutton {
   margin-left: 40px;
   position: absolute;
-  bottom: 19px; 
-  left: 0%; 
-  transform: translateX(-50%); 
+  bottom: 19px;
+  left: 0%;
+  transform: translateX(-50%);
   color: black;
   border: none;
   background: none;
@@ -218,9 +216,9 @@
 .rightbutton {
   margin-left: 40px;
   position: absolute;
-  bottom: 19px; 
-  left: 81%; 
-  transform: translateX(-50%); 
+  bottom: 19px;
+  left: 81%;
+  transform: translateX(-50%);
   color: black;
   border: none;
   background: none;
@@ -228,6 +226,17 @@
   font-size: 40px;
   z-index: 10;
 
+}
+
+.bottom-container {
+  position: absolute;
+  left: -212px;
+  bottom: -773px;
+  border-top: 2px solid black;
+  height: 80px;
+  width: 424px;
+  background-color: white;
+  z-index: 8;
 }
 
 .custom-checkbox {
@@ -249,8 +258,8 @@
 
 .back-button {
   position: absolute;
-  top: 47px;
-  left: 1120px;
+  top: -58px;
+  left: 150px;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -342,7 +351,7 @@
 }
 
 .color-option.selected {
-  border-color: black;
+  border: 3px solid black;
 }
 
 .note-creation-box {
@@ -422,8 +431,8 @@
 
 .day-settings {
   position: absolute;
-  top: -112px;
-  right: -380px;
+  top: 9px;
+  right: -370px;
   background-color: white;
   padding: 1px;
   cursor: pointer;
@@ -446,8 +455,8 @@
 }
 
 .mobile-container {
-  width: 20%; 
-  height: 85vh; 
+  width: 384px;
+  height: 820px;
   margin: 0 auto;
   border: 2px solid black;
   border-radius: 0px;
@@ -522,15 +531,4 @@ body {
   cursor: pointer;
   border-radius: 5px;
   margin: 2px solid black;
-}
-
-.bottom-container {
-  position: absolute;
-  left:748px;
-  bottom: 83px;
-  border-top: 2px solid black;
-  height: 80px;
-  width: 424px;
-  background-color: white;
-  z-index: 8;
 }
