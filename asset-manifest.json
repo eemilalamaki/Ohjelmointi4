@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/Ohjelmointi4/static/css/main.571f98c5.css",
+    "main.css": "/Ohjelmointi4/static/css/main.b28f0a64.css",
     "main.js": "/Ohjelmointi4/static/js/main.577c2301.js",
     "static/js/453.4040e399.chunk.js": "/Ohjelmointi4/static/js/453.4040e399.chunk.js",
     "static/media/settings.png": "/Ohjelmointi4/static/media/settings.ba393864f88b281411d9.png",
     "static/media/trash.png": "/Ohjelmointi4/static/media/trash.c4e35861d2606e76ed78.png",
     "index.html": "/Ohjelmointi4/index.html",
-    "main.571f98c5.css.map": "/Ohjelmointi4/static/css/main.571f98c5.css.map",
+    "main.b28f0a64.css.map": "/Ohjelmointi4/static/css/main.b28f0a64.css.map",
     "main.577c2301.js.map": "/Ohjelmointi4/static/js/main.577c2301.js.map",
     "453.4040e399.chunk.js.map": "/Ohjelmointi4/static/js/453.4040e399.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.571f98c5.css",
+    "static/css/main.b28f0a64.css",
     "static/js/main.577c2301.js"
   ]
 }
