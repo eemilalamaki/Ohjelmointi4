@@ -139,11 +139,11 @@
 
 .checkmark-button {
   bottom: -20px;
-  left: 185px;
+  left: 85%;
   position: absolute;
   display: block;
   margin: 20px auto;
-  padding: 2.5px 5px;
+  padding: 1.5px, 2.5px;
   font-size: 16px;
   border-radius: 60%;
   border: none;
@@ -167,7 +167,7 @@
   background-color: #ffffff;
   border: 2px solid black;
   bottom: -20px;
-  left: 185px;
+  left: 85%;
 }
 
 .update-note-button:hover {
