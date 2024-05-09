@@ -239,6 +239,7 @@ function NoteApp() {
     selectedHour = Math.min(selectedHour || 0, 23);
     const formattedHour = selectedHour.toString().padStart(2, "0");
     setTime(formattedHour + ":" + time.split(":")[1]);
+    setTime(formattedHour + ":00");
   };
 
   const handleMinuteChange = (e) => {
@@ -351,7 +352,7 @@ function NoteApp() {
       const timeB = new Date(`1970-01-01T${b.time}`);
       return timeA - timeB;
     });
-    
+
     return filteredNotes;
   };
 
