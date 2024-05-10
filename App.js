@@ -3,6 +3,7 @@ import './App.css';
 import deleteicon from './trash.png';
 import settingsicon from './settings.png'
 
+// Component for displaying an alert message
 function Alert({ message, onClose }) {
   return (
     <div className="alert">
@@ -14,6 +15,7 @@ function Alert({ message, onClose }) {
   );
 }
 
+// Component for confirming a delete action
 const DeleteConfirmation = ({ message, onConfirm, onCancel }) => {
   return (
     <div className="confirmation">
@@ -30,6 +32,7 @@ const DeleteConfirmation = ({ message, onConfirm, onCancel }) => {
   );
 };
 
+// Component for displaying settings menu
 const SettingsMenu = ({ toggleLanguage, toggleTheme, language, theme, onClose }) => {
   return (
     <div className="settings-menu">
@@ -177,10 +180,12 @@ function NoteApp() {
     setShowSettings(!showSettings);
   };
 
+  // Effect hook to filter notes by current day
   useEffect(() => {
     filterNotesByDay(currentDay);
   }, [currentDay, notes]);
 
+  // Function to add a new note
   const addNote = () => {
     if (editMode) {
       const updatedNotes = notes.map(note => {
@@ -234,6 +239,7 @@ function NoteApp() {
     }
   };
 
+  // Handlers for hour and minute change in time picker
   const handleHourChange = (e) => {
     let selectedHour = parseInt(e.target.value);
     selectedHour = Math.min(selectedHour || 0, 23);
@@ -251,6 +257,7 @@ function NoteApp() {
     setTime(time.split(":")[0] + ":" + formattedMinute);
   };
 
+  // Function to handle note deletion
   const handleDeleteNote = id => {
     const confirmDelete = (
       <DeleteConfirmation
@@ -276,6 +283,7 @@ function NoteApp() {
     setAlertMessage(confirmDelete);
   };
 
+  // Function to handle note editing
   const handleEditNote = id => {
     const noteToEdit = notes.find(note => note.id === id);
     setName(noteToEdit.name);
@@ -289,11 +297,13 @@ function NoteApp() {
     setSelectedColorOption(noteToEdit.color);
   };
 
+  // Function to handle color selection
   const handleColorSelect = color => {
     setSelectedColor(color);
     setSelectedColorOption(color);
   };
 
+  // Function to toggle note completion status
   const handleNoteCompletionToggle = id => {
     const updatedNotes = notes.map(note => {
       if (note.id === id) {
@@ -307,6 +317,7 @@ function NoteApp() {
     setNotes(updatedNotes);
   };
 
+  // Function to close note creation/editing menu
   const handleClose = () => {
     setName('');
     setTime('');
@@ -318,12 +329,14 @@ function NoteApp() {
     setEditNoteId(null);
   };
 
+  // Function to get the date
   const getCurrentDate = () => {
     const date = new Date(startDate);
     date.setDate(startDate.getDate() + currentDay);
     return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
   };
 
+  // Functions to navigate to previous and next days
   const prevDay = () => {
     setCurrentDay(currentDay === 0 ? 6 : currentDay - 1);
   };
@@ -332,11 +345,13 @@ function NoteApp() {
     setCurrentDay(currentDay === 6 ? 0 : currentDay + 1);
   };
 
+  // Function to toggle between day and note view
   const toggleDayView = (dayIndex) => {
     setCurrentDay(dayIndex);
     setShowDayView(!showDayView);
   };
 
+  // Function to filter notes by day
   const filterNotesByDay = (dayIndex) => {
     const currentDate = new Date(startDate);
     currentDate.setDate(startDate.getDate() + dayIndex);
@@ -358,6 +373,7 @@ function NoteApp() {
     return filteredNotes;
   };
 
+  // JSX for rendering the Note App UI
   return (
     <div className='mobile-container'>
       <div className="note-app"></div>
