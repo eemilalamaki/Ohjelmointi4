@@ -238,8 +238,10 @@ function NoteApp() {
     let selectedHour = parseInt(e.target.value);
     selectedHour = Math.min(selectedHour || 0, 23);
     const formattedHour = selectedHour.toString().padStart(2, "0");
-    setTime(formattedHour + ":" + time.split(":")[1]);
-    setTime(formattedHour + ":00");
+    const currentMinute = parseInt(time.split(":")[1]);
+    const formattedMinute = isNaN(currentMinute) ? '00' : currentMinute.toString().padStart(2, "0");
+
+    setTime(`${formattedHour}:${formattedMinute}`);
   };
 
   const handleMinuteChange = (e) => {
@@ -485,7 +487,7 @@ function NoteApp() {
             </div>
           </div>
           <div className="input-group">
-            <div className="input-lab l">Kuvaus</div>
+            <div className="input-label">Kuvaus</div>
             <textarea
               placeholder="Anna muistion kuvaus"
               value={desc}
